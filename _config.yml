@@ -1,0 +1,24 @@
+markdown: kramdown
+highlighter: rouge
+encoding: UTF-8
+permalink: blog/:year/:month/:day/:title.html
+paginate: 6
+paginate_path: page/:num
+
+blog:
+    name: iofisher                                       # 博客名称
+    description: Stay Hungry, Stay Foolish               # 博客描述
+    title: iofisher的博客                                # 网页标题
+    url: http://iofisher.github.io/                      # 博客地址
+    duoshuo: iofisher                                    # 多说ID
+    tongji: 86bd7a5c3cdef13f041ff1c1fd081c53             # 百度统计ID
+    qiniu:                                               # 七牛云地址
+author:
+    name: dzy                                            # 作者名称
+    email:                                               # 邮箱地址
+    weibo:                                               # 微博地址
+    github: https://github.com/iofisher/                 # GitHub地址
+    logo: /res/img/icon.png    # logo地址
+    douban:
+        name: iofisher                                   # 豆瓣地址名称
+        key: 0812f9cbe5e88da61838ed63b1b9a8f2            # 豆瓣API Key
