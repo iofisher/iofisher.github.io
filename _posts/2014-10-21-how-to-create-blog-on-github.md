@@ -78,3 +78,9 @@ D、最后在_config.yml中添加设置项：`highlighter: pygments`。
 
 ### **7. 申请github账号，创建博客仓库** ###
 为了将博客搬到github上，我们需要申请一个github账号，具体申请过程省略。注意直接托管在github上的博客，需要创建名为xxx.github.io的仓库，其中xxx为github的账号名，http://xxx.github.io即为你的博客域名。最后将本地测试通过的博客上传到github上，那么就可以根据域名访问了。
+  
+
+
+#### 参考资料： ####
+《Run Jekyll on Windows》 [http://jekyll-windows.juthilo.com/](http://jekyll-windows.juthilo.com/)  
+《Jekyll中文网站》：[http://jekyllcn.com/](http://jekyllcn.com/)
