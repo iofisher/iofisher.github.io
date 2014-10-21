@@ -9,7 +9,8 @@ date: 2014-10-21
 ### **1. 下载Ruby软件包**  ###
 Ruby 2.1.3（根据需要选择32位或64位）  
 DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe（与Ruby版本对应一致）  
-[下载地址](http://rubyinstaller.org/downloads/)
+[下载地址](http://rubyinstaller.org/downloads/)  
+【建议：如果要使用Pygments代码高亮功能，最好使用Ruby 1.9.3版本，因为yajl-ruby版本目前还不兼容】
 
 ![ruby下载页面](http://iofisher.qiniudn.com/%40%2Fblog%2Fruby_installers.jpg)
 
@@ -71,10 +72,22 @@ D、最后在_config.yml中添加设置项：`highlighter: pygments`。
 项目内容包含如下：  
 ![](http://iofisher.qiniudn.com/%40%2Fblog%2Fjekyll_demo_blog.png)  
 其中“\_config.yml”为配置文件，“\_posts”是博客文章，“\_site”是页面，“css”用于定义博客样式。  
+  
 在执行`jekyll serve`这条命令时，可能出现“Liquid Exception: cannot load such file -- yajl/2.1/yajl in _posts/xxx.markdown”这样的错误，那么一种解决方法是将_config.yml文件代码高亮属性改为`highlighter: rouge`;另一种是在保持`highlighter: pygments`不变的情况下，执行命令`gem install yajl-ruby --platform=ruby`（[https://github.com/brianmario/yajl-ruby/issues/116](https://github.com/brianmario/yajl-ruby/issues/116)）。  
+还有可能遇到这样的问题：  
+（a）  
+![](http://iofisher.qiniudn.com/%40%2Fblog%2Fwdm-problem.jpg)    
+解决方法是安装wdm，执行命令`gem install wdm`。  
+（b）  
+![](http://iofisher.qiniudn.com/%40%2Fblog%2Fposix-spawn-problem.jpg)  
+这个问题可以这样解决，在执行`jekyll serve`之前，先执行`chcp 65001`，尽管还有错误提示，但可以正常运行。  
+  
 然后在浏览器中输入http://localhost:4000/即出现默认的简单blog，如下：  
 ![](http://iofisher.qiniudn.com/%40%2Fblog%2Fsimple_demo_blog.png)  
-根据个人喜好，可以搭建自己喜好的模板风格。[https://github.com/jekyll/jekyll/wiki/sites](https://github.com/jekyll/jekyll/wiki/sites)列出了许多博客站点及其模板源码，我们可以获取源码，然后按照要求配置，即可在本地文件夹下构建博客（执行`jekyll serve`）。
+根据个人喜好，可以搭建自己喜好的模板风格。[https://github.com/jekyll/jekyll/wiki/sites](https://github.com/jekyll/jekyll/wiki/sites)列出了许多博客站点及其模板源码，我们可以获取源码，然后按照要求配置，即可在本地文件夹下构建博客（执行`jekyll serve`）。  
+要想让代码语法高亮，它在markdown文件中的格式是这样的：  
+![](http://iofisher.qiniudn.com/%40%2Fblog%2Fcode_synax_highlight_pyments.jpg)  
+其中xxxx为编程语言，具体可参考文末资料。在xxx后面加上linenos属性表示显示行数。
 
 ### **7. 申请github账号，创建博客仓库** ###
 为了将博客搬到github上，我们需要申请一个github账号，具体申请过程省略。注意直接托管在github上的博客，需要创建名为xxx.github.io的仓库，其中xxx为github的账号名，http://xxx.github.io即为你的博客域名。最后将本地测试通过的博客上传到github上，那么就可以根据域名访问了。
@@ -83,4 +96,5 @@ D、最后在_config.yml中添加设置项：`highlighter: pygments`。
 
 #### 参考资料： ####
 《Run Jekyll on Windows》 [http://jekyll-windows.juthilo.com/](http://jekyll-windows.juthilo.com/)  
-《Jekyll中文网站》：[http://jekyllcn.com/](http://jekyllcn.com/)
+《Jekyll中文网站》：[http://jekyllcn.com/](http://jekyllcn.com/)  
+《Pygments代码高亮语法》：[http://pygments.org/docs/lexers/](http://pygments.org/docs/lexers/)

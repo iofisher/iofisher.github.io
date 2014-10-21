@@ -5,8 +5,8 @@
     <description>iofisher - Stay Hungry, Stay Foolish</description>
     <link>http://iofisher.github.io/</link>
     <atom:link href="http://iofisher.github.io//page/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 21 Oct 2014 01:39:02 +0800</pubDate>
-    <lastBuildDate>Tue, 21 Oct 2014 01:39:02 +0800</lastBuildDate>
+    <pubDate>Tue, 21 Oct 2014 23:59:24 +0800</pubDate>
+    <lastBuildDate>Tue, 21 Oct 2014 23:59:24 +0800</lastBuildDate>
     <generator>dzy</generator>
     
       <item>
@@ -16,7 +16,8 @@
 &lt;h3 id=&quot;ruby&quot;&gt;&lt;strong&gt;1. 下载Ruby软件包&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;Ruby 2.1.3（根据需要选择32位或64位）&lt;br /&gt;
 DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe（与Ruby版本对应一致）&lt;br /&gt;
-&lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;下载地址&lt;/a&gt;&lt;br /&gt;
+【建议：如果要使用Pygments代码高亮功能，最好使用Ruby 1.9.3版本，因为yajl-ruby版本目前还不兼容】&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://iofisher.qiniudn.com/%40%2Fblog%2Fruby_installers.jpg&quot; alt=&quot;ruby下载页面&quot; /&gt;&lt;/p&gt;
 
@@ -80,14 +81,31 @@ D、最后在_config.yml中添加设置项：&lt;code&gt;highlighter: pygments&l
 &lt;code&gt;jekyll serve&lt;/code&gt;&lt;br /&gt;
 项目内容包含如下：&lt;br /&gt;
 &lt;img src=&quot;http://iofisher.qiniudn.com/%40%2Fblog%2Fjekyll_demo_blog.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-其中“_config.yml”为配置文件，“_posts”是博客文章，“_site”是页面，“css”用于定义博客样式。&lt;br /&gt;
-在执行&lt;code&gt;jekyll serve&lt;/code&gt;这条命令时，可能出现“Liquid Exception: cannot load such file – yajl/2.1/yajl in _posts/xxx.markdown”这样的错误，那么一种解决方法是将_config.yml文件代码高亮属性改为&lt;code&gt;highlighter: rouge&lt;/code&gt;;另一种是在保持&lt;code&gt;highlighter: pygments&lt;/code&gt;不变的情况下，执行命令&lt;code&gt;gem install yajl-ruby --platform=ruby&lt;/code&gt;（&lt;a href=&quot;https://github.com/brianmario/yajl-ruby/issues/116&quot;&gt;https://github.com/brianmario/yajl-ruby/issues/116&lt;/a&gt;）。&lt;br /&gt;
-然后在浏览器中输入http://localhost:4000/即出现默认的简单blog，如下：&lt;br /&gt;
+其中“_config.yml”为配置文件，“_posts”是博客文章，“_site”是页面，“css”用于定义博客样式。  &lt;/p&gt;
+
+&lt;p&gt;在执行&lt;code&gt;jekyll serve&lt;/code&gt;这条命令时，可能出现“Liquid Exception: cannot load such file – yajl/2.1/yajl in _posts/xxx.markdown”这样的错误，那么一种解决方法是将_config.yml文件代码高亮属性改为&lt;code&gt;highlighter: rouge&lt;/code&gt;;另一种是在保持&lt;code&gt;highlighter: pygments&lt;/code&gt;不变的情况下，执行命令&lt;code&gt;gem install yajl-ruby --platform=ruby&lt;/code&gt;（&lt;a href=&quot;https://github.com/brianmario/yajl-ruby/issues/116&quot;&gt;https://github.com/brianmario/yajl-ruby/issues/116&lt;/a&gt;）。&lt;br /&gt;
+还有可能遇到这样的问题：&lt;br /&gt;
+（a）&lt;br /&gt;
+&lt;img src=&quot;http://iofisher.qiniudn.com/%40%2Fblog%2Fwdm-problem.jpg&quot; alt=&quot;&quot; /&gt;  &lt;br /&gt;
+解决方法是安装wdm，执行命令&lt;code&gt;gem install wdm&lt;/code&gt;。&lt;br /&gt;
+（b）&lt;br /&gt;
+&lt;img src=&quot;http://iofisher.qiniudn.com/%40%2Fblog%2Fposix-spawn-problem.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+这个问题可以这样解决，在执行&lt;code&gt;jekyll serve&lt;/code&gt;之前，先执行&lt;code&gt;chcp 65001&lt;/code&gt;，尽管还有错误提示，但可以正常运行。  &lt;/p&gt;
+
+&lt;p&gt;然后在浏览器中输入http://localhost:4000/即出现默认的简单blog，如下：&lt;br /&gt;
 &lt;img src=&quot;http://iofisher.qiniudn.com/%40%2Fblog%2Fsimple_demo_blog.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-根据个人喜好，可以搭建自己喜好的模板风格。&lt;a href=&quot;https://github.com/jekyll/jekyll/wiki/sites&quot;&gt;https://github.com/jekyll/jekyll/wiki/sites&lt;/a&gt;列出了许多博客站点及其模板源码，我们可以获取源码，然后按照要求配置，即可在本地文件夹下构建博客（执行&lt;code&gt;jekyll serve&lt;/code&gt;）。&lt;/p&gt;
+根据个人喜好，可以搭建自己喜好的模板风格。&lt;a href=&quot;https://github.com/jekyll/jekyll/wiki/sites&quot;&gt;https://github.com/jekyll/jekyll/wiki/sites&lt;/a&gt;列出了许多博客站点及其模板源码，我们可以获取源码，然后按照要求配置，即可在本地文件夹下构建博客（执行&lt;code&gt;jekyll serve&lt;/code&gt;）。&lt;br /&gt;
+要想让代码语法高亮，它在markdown文件中的格式是这样的：&lt;br /&gt;
+&lt;img src=&quot;http://iofisher.qiniudn.com/%40%2Fblog%2Fcode_synax_highlight_pyments.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+其中xxxx为编程语言，具体可参考文末资料。在xxx后面加上linenos属性表示显示行数。&lt;/p&gt;
 
 &lt;h3 id=&quot;github&quot;&gt;&lt;strong&gt;7. 申请github账号，创建博客仓库&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;为了将博客搬到github上，我们需要申请一个github账号，具体申请过程省略。注意直接托管在github上的博客，需要创建名为xxx.github.io的仓库，其中xxx为github的账号名，http://xxx.github.io即为你的博客域名。最后将本地测试通过的博客上传到github上，那么就可以根据域名访问了。&lt;/p&gt;
+
+&lt;h4 id=&quot;section-3&quot;&gt;参考资料：&lt;/h4&gt;
+&lt;p&gt;《Run Jekyll on Windows》 &lt;a href=&quot;http://jekyll-windows.juthilo.com/&quot;&gt;http://jekyll-windows.juthilo.com/&lt;/a&gt;&lt;br /&gt;
+《Jekyll中文网站》：&lt;a href=&quot;http://jekyllcn.com/&quot;&gt;http://jekyllcn.com/&lt;/a&gt;&lt;br /&gt;
+《Pygments代码高亮语法》：&lt;a href=&quot;http://pygments.org/docs/lexers/&quot;&gt;http://pygments.org/docs/lexers/&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 21 Oct 2014 00:00:00 +0800</pubDate>
         <link>http://iofisher.github.io//blog/2014/10/21/how-to-create-blog-on-github.html</link>
