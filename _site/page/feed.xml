@@ -5,8 +5,8 @@
     <description>iofisher - Stay Hungry, Stay Foolish</description>
     <link>http://iofisher.github.io/</link>
     <atom:link href="http://iofisher.github.io//page/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 02 Nov 2014 09:07:10 +0800</pubDate>
-    <lastBuildDate>Sun, 02 Nov 2014 09:07:10 +0800</lastBuildDate>
+    <pubDate>Sun, 02 Nov 2014 09:03:23 +0800</pubDate>
+    <lastBuildDate>Sun, 02 Nov 2014 09:03:23 +0800</lastBuildDate>
     <generator>dzy</generator>
     
       <item>
@@ -200,7 +200,8 @@ java.util.Observer：  &lt;/p&gt;
 &lt;p&gt;想要进行通知，须调用Observable类的setChanged方法（注意方法为protected）。&lt;/p&gt;
 
 &lt;p&gt;参考资料：&lt;br /&gt;
-【1】&lt;a href=&quot;http://blog.csdn.net/a19881029/article/details/8975962&quot;&gt;jdk自带的观察者模式&lt;/a&gt;&lt;/p&gt;
+【1】&lt;a href=&quot;http://blog.csdn.net/a19881029/article/details/8975962&quot;&gt;jdk自带的观察者模式&lt;/a&gt;
+ No newline at end of file&lt;/p&gt;
 </description>
         <pubDate>Sat, 01 Nov 2014 00:00:00 +0800</pubDate>
         <link>http://iofisher.github.io//blog/2014/11/01/observer-pattern.html</link>

@@ -201,3 +201,4 @@ public class Observable {
 
 参考资料：  
 【1】[jdk自带的观察者模式](http://blog.csdn.net/a19881029/article/details/8975962)
+ No newline at end of file
