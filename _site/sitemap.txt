@@ -8,5 +8,4 @@ http://iofisher.github.io//page/category.html
 http://iofisher.github.io//page/about.html
 http://iofisher.github.io//404.html
 
-http://iofisher.github.io//blog/2014/11/01/observer_pattern.html
 http://iofisher.github.io//blog/2014/10/21/how-to-create-blog-on-github.html
