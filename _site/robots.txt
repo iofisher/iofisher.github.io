@@ -1,0 +1,3 @@
+User-Agent: *
+
+Sitemap: http://iofisher.github.io/sitemap.txt
