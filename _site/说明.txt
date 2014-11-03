@@ -1,0 +1,4 @@
+Github现在不支持rouge，但是本地可以用【这个问题向github技术支持咨询，然后邮件回复：Sorry for the trouble! Rouge isn't installed with Jekyll by default, and isn't supported on GitHub Pages at the moment.】
+
+最好是按照说明安装好pygments，但中文环境windows下确实存在不少问题，主要是各个引用版本之间不兼容。
+为了少安装一些东西，可以这样处理：本地配置文件_config.yml中仍然配置rouge，但是在github上则使用pygments，这样可以在本地执行“jekyll serve”,审查好格式后提交到github上。
