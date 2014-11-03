@@ -1,5 +1,5 @@
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 encoding: UTF-8
 permalink: blog/:year/:month/:day/:title.html
 paginate: 6
